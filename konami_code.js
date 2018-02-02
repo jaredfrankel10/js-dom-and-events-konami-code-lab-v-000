@@ -8,15 +8,15 @@ function init() {
      const key = parseInt(e.detail || e.which);
      if(key === code[index]){
        index++;
-   
+
        if(key[index] === code.length){
          alert("dude you won!")
-   
+
          index = 0;
        } else{
          index = 0;
        }
      }
-   
+
      });
 }
