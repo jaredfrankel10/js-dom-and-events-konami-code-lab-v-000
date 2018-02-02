@@ -4,19 +4,18 @@ function init() {
   // Write your JavaScript code inside the init() function
   let index = 0;
    
-   document.body.addEventListener('keydown', function(e){
-     const key = parseInt(e.detail || e.which);
-     if(key === code[index]){
-       index++;
+  document.body.addEventListener('keydown', function onKeyDownHandler(e) {
+    const key = parseInt(e.detail || e.which);
 
-       if(key[index] === code.length){
-         alert("dude you won!")
+    if (key === code[index]) {
+      index++;
 
-         index = 0;
-       } else{
-         index = 0;
-       }
-     }
-
-     });
+      if (index === code.length) {
+        alert('Konami Code!');  
+        index = 0;
+      }
+    } else {
+      index = 0;
+    }
+  });
 }
